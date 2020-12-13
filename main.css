@@ -16,7 +16,7 @@ html {
     padding: 0;
     border: none;
     outline: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
 }
 
 body > *, header {
@@ -123,16 +123,19 @@ nav{
 }
 
 .navheading >h1{
-    font-size: 4em;
+    font-size: 5em;
     font-style: italic;
     margin-top:100px;
     text-align: center;
+
 }
 
 .navheading > p{
+    font-size: 1.2em;
     margin-top: 30px;
-    width: 500px;
+    width: 80%;
     text-align: center;
+    line-height: 25px;
 }
 
 button{
@@ -180,10 +183,11 @@ hr{
 }
 
 .bggreat > div > p {
-    margin-top: 70px;
-    width: 500px;
+    margin-top: 20px;
+    width: 70%;
     text-align: center;
-    color: #776c6e;
+    color: black;
+    line-height: 25px;
 }
 
 .egg{
@@ -206,7 +210,7 @@ hr{
 
 .egg > div > h3{
     color: #FD5102;
-    margin: 20px 0px;
+    margin: 5px 20px 20px 20px;
 }
 
 .egg > div > p{
