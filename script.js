@@ -1,4 +1,5 @@
 'use strict';
+
     var multiItemSlider = (function () {
       return function (selector, config) {
         var
@@ -119,7 +120,7 @@
       });
     });
 
-    $(document).ready(function(){
+   $(document).ready(function(){
       $(".navmain").on("click","a", function (event) {
           event.preventDefault();
           var id  = $(this).attr('href'),
@@ -127,8 +128,5 @@
           $('body,html').animate({scrollTop: top}, 1500);
       });
   });
-
-
-
 
   

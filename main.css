@@ -24,6 +24,8 @@ body > *, header {
     
 }
 
+
+
 body > * > div > div, header > div, footer > div, .navcenter .bgnav div{
     margin: 0 auto;
 }
@@ -32,10 +34,20 @@ body > * > div > div {
     width: var(--w__desk-s);
 }
 
+/* menu mobile */
+
+nav{
+  display: none;
+}
+
+.navheading > input{
+  display: none;
+}
+
 /* header */
 
 .bgheader{
-    background: #d11919;
+    background: #FD5102;
 }
 
 .bgheader > div{
@@ -73,6 +85,7 @@ body > * > div > div {
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center center;
+    background-attachment: fixed;
     height: 100%;
     background-size: cover;
 } 
@@ -82,11 +95,12 @@ body > * > div > div {
     flex-direction: row;
     align-items: center;
     align-content: center;
+    justify-content: center;
     padding: 10px;
 }
 
 .nav img{
-    margin-left: 80px;
+    margin-left: 60px;
 }
 
 .navmain > a{
@@ -96,7 +110,7 @@ body > * > div > div {
 }
 
 .navmain > a:hover{
-    color:#FFE501;
+    color:#FD5102;
 }
 
 /* heading */
@@ -112,6 +126,7 @@ body > * > div > div {
     font-size: 4em;
     font-style: italic;
     margin-top:100px;
+    text-align: center;
 }
 
 .navheading > p{
@@ -124,7 +139,7 @@ button{
     margin-top:30px;
     padding: 15px;
     border-radius: 10px;
-    background-color: #d11919;
+    background-color: #FD5102;
     cursor: pointer;
 }
 
@@ -157,8 +172,8 @@ h2{
 
 hr{
     border: none;
-    background-color: #a54442;
-    color: #a54442;
+    background-color: #FD5102;
+    color: #FD5102;
     height: 2px;
     margin: 20px auto;
     width: 50px;
@@ -190,7 +205,7 @@ hr{
 }
 
 .egg > div > h3{
-    color: #d11919;
+    color: #FD5102;
     margin: 20px 0px;
 }
 
@@ -304,8 +319,9 @@ hr{
   }
 
   .coaches > div > h4 > span{
-      color: red;
+      color: #FD5102;
       font-size: 0.8em;
+      margin-left: 2px;
   }
 
   .coaches > div > p{
@@ -313,10 +329,11 @@ hr{
       text-align: center;
   }
 
-  /* comments */
+  /* reviews */
 .testbg{
     background: url(img/reviewsbg.jpg) no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .container > h2{
@@ -501,31 +518,183 @@ h3.city-name {
   body > * > div > div {
     width: var(--w__mobi);
   }
+  
+  nav{
+    display: block;
+    position: relative;
+    right: -100px;
+  }
+  
+  
+
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+  .line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#fff;
+    stroke-width:5.5;
+    stroke-linecap:round;
+  }
+  
+  .ham3 .top {
+    stroke-dasharray: 40 130;
+  }
+  .ham3 .middle {
+    stroke-dasharray: 40 140;
+  }
+  .ham3 .bottom {
+    stroke-dasharray: 40 205;
+  }
+  .ham3.active .top {
+    stroke-dasharray: 75 130;
+    stroke-dashoffset: -63px;
+  }
+  .ham3.active .middle {
+    stroke-dashoffset: -102px;
+  }
+  .ham3.active .bottom {
+    stroke-dasharray: 110 205;
+    stroke-dashoffset: -86px;
+  }
+  
+  #menu-checkbox {
+    display: none; /* чекбокс скрыт */
+  }
+  .main-menu {
+    /* пункты меню скрыты */
+    display: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: -190px; top:10px; 
+  }
+  .main-menu li {
+    /* пункты меню расположены вертикально */
+    /* каждый имеет ширину 100% */
+    font-size: 1em;
+    display: block;
+    width: 100%;
+  }
+  .main-menu a {
+    /* немного стилизуем ссылки */
+    display: block;
+    color: white;
+    padding: .5em;
+    text-decoration: none;
+  }
+  .main-menu a:hover {
+    text-decoration: underline;
+  }
+  .toggle-button {
+    display: block;
+    /* не забываем явно указать каким должен быть курсор */
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+  }
+  .toggle-button:after {
+    /* получаем данные из атрибута data-open в html */
+    content: attr(data-open);
+    display: block;
+    padding: 10px 30px;
+  }
+  #menu-checkbox:checked + nav[role="navigation"] .main-menu {
+    /* когда чекбокс активен меню становится видимым */
+    display: block;
+  }
+  #menu-checkbox:checked + nav[role="navigation"] .toggle-button:after {
+    content: attr(data-close);
+  }
+  
+  
+  .navheading > h1{
+    font-size: 3em;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .navcenter{
+    height: 100%;
+  }
+  
+  button{
+    margin-bottom: 20px;
+  }
       
   .bgheader > div, .nav  {
       display: none;
   }    
   
+  
+  .navheading > p{
+    max-width: 100%;
+    margin: 10px;
+  }
+  
   .bggreat > div > p{
     max-width: 320px;
+    margin: 0px 10px;
+    width: 100%;
   }
   
   .egg{
     flex-direction: column;
   }
   
+  .egg > div{
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+  
+  .egg > div > h3, .egg > div > p{
+    margin: 0px;
+  } 
+  
+  .egg > div > p{
+    margin-bottom: 20px;
+  }
+  
+  .slider__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
   .coaches > div{
     flex-direction: column;
   }
   
+  .owl-my-nav {
+   display: none;
+  }
+  
+  .text-testimonial{
+   font-size: 1em; 
+  }
+  
+  .owl-stage-outer{
+    height: 100%;
+  }
+  
+  .footerbg > div{
+    flex-direction: column;
+  } 
+  
+  
 }
-
-
-
-
-
-
-
 
 
 
