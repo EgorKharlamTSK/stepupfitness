@@ -204,6 +204,7 @@ hr{
 .egg > div{
     border: #f4f4f4 solid 2px;
     margin-left: 20px;
+    padding: 10px;
 }
 
 .egg > div > h3{
