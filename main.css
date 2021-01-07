@@ -77,7 +77,7 @@ nav{
 
 /* navigation */
 .navcenter{
-    height: 672px;
+    height: 100vh;
 }
 
  .bgnav{
@@ -123,15 +123,13 @@ nav{
 }
 
 .navheading >h1{
-    font-size: 5em;
-    font-style: italic;
-    margin-top:100px;
+    font-size: 6em;
+    margin-top:200px;
     text-align: center;
-
 }
 
 .navheading > p{
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-top: 30px;
     width: 80%;
     text-align: center;
