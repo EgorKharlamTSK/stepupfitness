@@ -55,7 +55,6 @@
           _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
         }
 
-        // обработчик события click для кнопок "назад" и "вперед"
         var _controlClick = function (e) {
           if (e.target.classList.contains('slider__control')) {
             e.preventDefault();
@@ -65,20 +64,18 @@
         };
 
         var _setUpListeners = function () {
-          // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
           _sliderControls.forEach(function (item) {
             item.addEventListener('click', _controlClick);
           });
         }
 
-        // инициализация
         _setUpListeners();
 
         return {
-          right: function () { // метод right
+          right: function () {
             _transformItem('right');
           },
-          left: function () { // метод left
+          left: function () {
             _transformItem('left');
           }
         }
@@ -88,7 +85,6 @@
 
     var slider = multiItemSlider('.slider')
 
-    /* REVIEWS */
 
     $(document).ready(function() {
       $(".owl-carousel").owlCarousel({

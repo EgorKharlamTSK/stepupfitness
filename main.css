@@ -3,8 +3,8 @@ html {
 }
 
 :root {
-    --w__desk-s: 70rem; /* Desktop Standart Width */
-    --w__desk-m: 80vw;  /* Desktop Mini Width */
+    --w__desk-s: 70rem; 
+    --w__desk-m: 80vw;  
     --w__tabl: 85vw;
     --w__mobi: 90vw;
     --c__accent: var(#ff5a5a);
@@ -404,7 +404,6 @@ h3.city-name {
 	cursor: default;
 }
 
-/*Изменяем внешний вид элементов управления (точки) */
 .owl-theme .owl-dots .owl-dot span {
 	width: 14px;
 	height: 14px;
@@ -415,7 +414,6 @@ h3.city-name {
 	height: 18px;
 }
 
-/*Стрелки*/
 .owl-my-nav {
 	position: absolute;
 	width: 100%;
@@ -575,10 +573,9 @@ h3.city-name {
   }
   
   #menu-checkbox {
-    display: none; /* чекбокс скрыт */
+    display: none;
   }
   .main-menu {
-    /* пункты меню скрыты */
     display: none;
     padding: 0;
     margin: 0;
@@ -586,14 +583,11 @@ h3.city-name {
     left: -190px; top:10px; 
   }
   .main-menu li {
-    /* пункты меню расположены вертикально */
-    /* каждый имеет ширину 100% */
     font-size: 1em;
     display: block;
     width: 100%;
   }
   .main-menu a {
-    /* немного стилизуем ссылки */
     display: block;
     color: white;
     padding: .5em;
@@ -604,19 +598,16 @@ h3.city-name {
   }
   .toggle-button {
     display: block;
-    /* не забываем явно указать каким должен быть курсор */
     cursor: pointer;
     background-color: transparent;
     color: #fff;
   }
   .toggle-button:after {
-    /* получаем данные из атрибута data-open в html */
     content: attr(data-open);
     display: block;
     padding: 10px 30px;
   }
   #menu-checkbox:checked + nav[role="navigation"] .main-menu {
-    /* когда чекбокс активен меню становится видимым */
     display: block;
   }
   #menu-checkbox:checked + nav[role="navigation"] .toggle-button:after {
