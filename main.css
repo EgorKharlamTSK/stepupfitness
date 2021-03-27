@@ -480,7 +480,7 @@ h3.city-name {
 }
 
 @media screen and (max-width: 1200px) {
-    body > * > div > div {
+  section > div > div, header > div > * {
         width: var(--w__desk-m);
     }    
     
@@ -512,7 +512,7 @@ h3.city-name {
   }
 
 @media (max-width: 600px){
-  body > * > div > div {
+  section > div > div, header > div > *{
     width: var(--w__mobi);
   }
   
