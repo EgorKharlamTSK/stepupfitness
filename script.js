@@ -116,7 +116,7 @@
       });
     });
 
-   $(document).ready(function(){
+  $(document).ready(function(){
       $(".navmain").on("click","a", function (event) {
           event.preventDefault();
           let id  = $(this).attr('href'),
