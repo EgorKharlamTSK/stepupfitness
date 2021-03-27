@@ -19,18 +19,15 @@ html {
     font-family: 'Roboto', 'Open Sans', sans-serif;
 }
 
-body > *, header {
+section > div, header > div {
     width: 100%;
-    
 }
 
-
-
-body > * > div > div, header > div, footer > div, .navcenter .bgnav div{
+section > div > div, header > div > div, footer > div{
     margin: 0 auto;
 }
 
-body > * > div > div {
+section > div > div, header > div > * {
     width: var(--w__desk-s);
 }
 
@@ -48,7 +45,6 @@ nav{
 
 .bgheader{
     background: #FD5102;
-    
 }
 
 .bgheader > div{
@@ -78,7 +74,7 @@ nav{
 
 /* navigation */
 
- .bgnav{
+.bgnav{
     background:url(img/navbg.jpg);
     background-repeat: no-repeat;
     background-size: auto;

@@ -1,8 +1,8 @@
 'use strict';
 
-    var multiItemSlider = (function () {
+    let multiItemSlider = (function () {
       return function (selector, config) {
-        var
+        let
           _mainElement = document.querySelector(selector), // основный элемент блока
           _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
           _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
@@ -20,12 +20,12 @@
           _items.push({ item: item, position: index, transform: 0 });
         });
 
-        var position = {
+        let position = {
           getMin: 0,
           getMax: _items.length - 1,
         }
 
-        var _transformItem = function (direction) {
+        let _transformItem = function (direction) {
           if (direction === 'right') {
             if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
               return;
@@ -55,15 +55,15 @@
           _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
         }
 
-        var _controlClick = function (e) {
+        let _controlClick = function (e) {
           if (e.target.classList.contains('slider__control')) {
             e.preventDefault();
-            var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+            let direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
             _transformItem(direction);
           }
         };
 
-        var _setUpListeners = function () {
+        let _setUpListeners = function () {
           _sliderControls.forEach(function (item) {
             item.addEventListener('click', _controlClick);
           });
@@ -83,7 +83,7 @@
       }
     }());
 
-    var slider = multiItemSlider('.slider')
+    let slider = multiItemSlider('.slider')
 
 
     $(document).ready(function() {
@@ -119,10 +119,9 @@
    $(document).ready(function(){
       $(".navmain").on("click","a", function (event) {
           event.preventDefault();
-          var id  = $(this).attr('href'),
+          let id  = $(this).attr('href'),
               top = $(id).offset().top;
           $('body,html').animate({scrollTop: top}, 1500);
       });
   });
 
-  
