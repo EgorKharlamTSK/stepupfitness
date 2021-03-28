@@ -1,14 +1,21 @@
-var modal = document.getElementById('myModal');
+let modal = document.getElementById('myModal');
 
 
-var btn = document.getElementById("myBtn");
+let btn = document.getElementById("myBtn");
+
+let btnMob = document.getElementById("myBtnMob");
 
 
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 
 
 btn.onclick = function() {
+	modal.style.display = "block";
+	document.body.style.overflow = "hidden";
+}
+
+btnMob.onclick = function() {
 	modal.style.display = "block";
 	document.body.style.overflow = "hidden";
 }
